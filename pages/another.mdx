@@ -1,31 +1,134 @@
-# Another Page
+# LixAR 
 
-```js filename="demo.js" {3} copy
-let a = 1;
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Overview](#overview)
+3. [Features](#features)
+4. [Demo](#demo)
+5. [Installation and Setup Guide](#installation-and-setup-guide)
+6. [Adding LixAR to Your Wix Site](#adding-lixar-to-your-wix-site)
+7. [Configuration Options](#configuration-options)
+8. [Additional Customization](#additional-customization)
+9. [Supported 3D Model Formats](#supported-3d-model-formats)
+10. [Use Cases](#use-cases)
+12. [Support and Resources](#support-and-resources)
 
-console.log(a);
-```
+---
 
-## Component
+## Introduction
 
-import { useState } from 'react'
+The `LixAR` component is part of the `Lix` library, developed by **Threed Software**, designed to bring Augmented Reality (AR) capabilities to web applications. Built using the `LitElement` library and the `@google/model-viewer` library, `LixAR` enables interactive AR model display on your website, giving visitors an immersive experience.
 
-{/* Import CSS modules */}
-import styles from '../components/counters.module.css'
+This component is part of the **Lix Components Library**, specifically created to extend the functionality of Wix websites, including Editor X and Wix Studio. `LixAR` is fully customizable and compatible with various 3D modeling formats.
 
-export const Counter = () => {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <button onClick={() => setCount(count + 1)} className={styles.counter}>Clicked {count} times</button>
-    </div>
-  );
-};
 
-<Counter/>
+---
 
-## External Component
+## Overview
 
-import Counters from '../components/counters'
+The `LixAR` component allows you to embed 3D models in `.glb` format onto your site, viewable in AR with smooth interaction and manipulation options. With properties that enable auto-launching of the AR viewer, model selection, and custom model placements, the `LixAR` component is highly flexible for various uses on eCommerce, educational, and real estate sites, among others.
 
-<Counters />
+---
+
+## Features
+
+- **Seamless AR Integration**: Integrate 3D AR models directly into Wix websites using `LitElement` and `@google/model-viewer`.
+- **Cross-Device Compatibility**: Works on Mac, PC, Android, iOS, and Meta Quest devices.
+- **Model Customization**: Customize models, add posters, select placements, and define viewer behavior.
+- **Auto AR Activation**: Option to activate AR automatically after a delay.
+- **Extensive Format Compatibility**: Supports `.glb` files from Blender, Sketchfab, Turbosquid, Windows Paint 3D, and others.
+- **Customizable for Enhanced Interaction**: Add custom properties and methods for model manipulation.
+
+---
+
+## Demo
+
+Check out the live demo of the LixAR component [here](https://www.threedsoftware.com/lix-components/ar).
+
+---
+
+## Installation and Setup Guide
+
+To get started with `LixAR`:
+
+1. **Install the Component**: Add `LixAR` from the Wix App Market or use Threed Software's official instructions.
+2. **Access the Wix Editor**: Navigate to your Wix Editor, log into your Wix account, and click "Edit Site" for the site you wish to add AR to.
+3. **Drag & Drop `LixAR`**: Add the `LixAR` HTML component to your Wix page and configure its settings.
+
+---
+
+## Adding LixAR to Your Wix Site
+
+1. **Install the App**:
+   - Go to the Wix App Market and click "Install App".
+   - Choose the relevant site (if you have multiple sites) and click "Add to Site".
+   
+2. **Configure App Settings**:
+   - Once in the Wix Editor, locate the `LixAR` component. This may appear as a widget, button, or other UI element.
+   - Use the Wix Editor or `setAttribute()` function to configure properties, such as the model file, poster image, and viewer settings.
+
+3. **Upload Models**:
+   - Supported formats include `.glb` files.
+   - You can upload custom `.glb` files or use hosted models.
+
+4. **Preview and Save**: 
+   - Test the functionality and layout of your model in the editor preview.
+   - Once satisfied, save the changes to your site.
+
+---
+
+## Configuration Options
+
+The following properties can be customized in `LixAR`:
+
+- **3D Model File** (`modelSrc`): Set the URL or upload path of your `.glb` model file.
+- **Poster Image** (`posterSrc`): An optional image displayed before loading the model.
+- **Auto AR Activation** (`autoAR`): Set a delay to automatically launch the AR viewer.
+- **Model Placement**: Define the positioning of the model within the viewer.
+  
+Use the `setAttribute()` function in the Wix Editor or code to customize these properties.
+
+---
+
+## Additional Customization
+
+For advanced customization, you can extend the component with custom methods and properties in the `LixAR` class. For example:
+  
+- **Additional Methods**: Add methods for rotation, scaling, or animations.
+- **Enhanced Interaction Properties**: Add specific behaviors or UI elements for user engagement.
+
+Refer to the [documentation](https://www.threedsoftware.com) for more details on adding custom functionalities.
+
+---
+
+## Supported 3D Model Formats
+
+The `LixAR` component supports `.glb` files, including files from:
+
+- **Blender**
+- **Sketchfab**
+- **Turbosquid**
+- **Smithsonian Institute**
+- **Windows Paint 3D**
+
+**Tip**: Ensure models are optimized for web use for best performance.
+
+---
+
+## Use Cases
+
+1. **eCommerce**: Display 3D models of products, giving customers a virtual try-on or inspection experience.
+2. **Real Estate**: Provide a virtual tour or scale model of property layouts.
+3. **Education**: Demonstrate complex models (e.g., anatomical, mechanical) for enhanced learning experiences.
+4. **Events**: Create interactive event or venue demos.
+5. **Personalized Greetings**: Customize visitor engagement with unique 3D elements.
+
+---
+
+## Support and Resources
+
+For support, please contact the Threed Software support team through their [support page](https://www.threedsoftware.com/contact).
+
+---
+
+By following this guide, you’ll be able to create an engaging and immersive AR experience on your Wix website, taking your web design to a new level with `LixAR`. Welcome to the future of spatial computing!
