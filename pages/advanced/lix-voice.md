@@ -1,4 +1,4 @@
-# Lix Voice - Transform Your Website with Voice Commands {#lix-voice-transform-your-website-with-voice-commands}
+# Lix Voice 
 
 **Lix Voice** is a powerful and versatile tool that brings voice-driven
 interaction to your website. This plugin enables users to navigate, fill
