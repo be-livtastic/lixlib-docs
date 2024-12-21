@@ -58,8 +58,7 @@ input:
         commands or phrases. Confirm that the spoken text is accurately
         displayed on your site.
 
-5.  **Utilize Captured Text with JavaScript (Optional for Custom
-    Interactions):**
+5.  **Utilize Captured Text with JavaScript:**
 
     -   Enable **Dev Mode** in the Wix Editor to access coding
         capabilities.
@@ -69,32 +68,28 @@ input:
 
 **FOR EXAMPLE**
 
-       ```javascript
-       $w("#voiceCore1").onResponse((event) => {
-           console.log(event.data); // Logs the voice input
-           // Use event.data to handle specific commands or actions
-       });
-       ```
-     - Publish your changes and test by speaking into the Lix Voice tool. The spoken input should appear in the console log.
+1.  **Listening to the event and logging the message**:
 
-------------------------------------------------------------------------
+    `$w("#voiceCore1").onResponse((event) => {
+        console.log(event.data.message); // Logs the message from voice input
+        // Use event.data.message to handle specific commands or actions
+    });`
 
-## Features
+2.  **Storing the message in a variable**:
 
--   **Multilingual Support:** Lix Voice enables real-time voice
-    interaction in multiple languages, making your website accessible to
-    a global audience. Users can switch languages seamlessly, enhancing
-    usability for diverse visitors.
+    Alternatively, if you want to store the message in a variable for further processing, you can do:
 
--   **Seamless Integration:** Designed for easy implementation, Lix
-    Voice integrates smoothly with your website and automatically
-    matches your site's theme. It requires minimal setup and can be
-    customized to suit your branding.
+    `$w("#voiceCore1").onResponse((event) => {
+        const message = event.data.message; // Store the voice input message
+        console.log(message); // Logs the message
+        // Now you can use the 'message' variable to execute specific actions
+    });`
 
--   **Offline Functionality:** Lix Voice remains functional even
-    offline. Preloaded language files allow users to continue
-    interacting with your site through voice commands without needing an
-    internet connection, making it reliable and accessible anywhere.
+
+-  This approach quickly ensures that you're capturing and logging the message. If there's an issue with how the voice data is being processed, this will help debug the problem.
+ 
+*   Publish your changes and test by speaking into the Lix Voice tool. The spoken input should appear in the console log.
+
 
 ------------------------------------------------------------------------
 
@@ -127,11 +122,28 @@ To enable voice recognition on your website:
 
 ## Demo
 
-Experience Lix Voice in action with our live demo. See how it enables
-hands-free navigation, voice-powered form filling, and seamless language
-switching.
+Experience Lix Voice in action with our live demo. See how it enables hands-free navigation, voice-powered form filling, and seamless language switching.
 
-\[<https://derrellchristopher.wixstudio.io/lixlibrary/search>\]
+[Live Demo](https://derrellchristopher.wixstudio.com/lixlibrary/components/lix-voice#:~:text=Install%20Now-,Live%20Demo)
+
+------------------------------------------------------------------------
+
+## Features
+
+-   **Multilingual Support:** Lix Voice enables real-time voice
+    interaction in multiple languages, making your website accessible to
+    a global audience. Users can switch languages seamlessly, enhancing
+    usability for diverse visitors.
+
+-   **Seamless Integration:** Designed for easy implementation, Lix
+    Voice integrates smoothly with your website and automatically
+    matches your site's theme. It requires minimal setup and can be
+    customized to suit your branding.
+
+-   **Offline Functionality:** Lix Voice remains functional even
+    offline. Preloaded language files allow users to continue
+    interacting with your site through voice commands without needing an
+    internet connection, making it reliable and accessible anywhere.
 
 ------------------------------------------------------------------------
 
@@ -154,7 +166,6 @@ reach out:
 
 -   **Support Email:** <contact+lix@threedsoftware.com>
 -   **Billing Email:** <contact@threedsoftware.com>
--   **Urgent Issues:** <christopher.derrell@adtelligent.net>
 
 ------------------------------------------------------------------------
 
@@ -167,7 +178,7 @@ Wix's [Terms of Service](https://www.wix.com/about/terms-of-use) and the
 documentation](https://support.wix.com/en/article/wix-blocks-creating-custom-elements).
 
 For specific licensing inquiries related to Lix Voice, please contact
-our support team or visit <https://lixlib.com>.
+our support team or visit [Lix Library](https://derrellchristopher.wixstudio.com/lixlibrary/components/lix-voice).
 
 ------------------------------------------------------------------------
 
