@@ -13,8 +13,8 @@ functionality with advanced, interactive components.
 
 -   [Installation](#installation)
 -   [Features](#features)
--   [Usage](#usage)
--   [Demo](#demo)
+-   [Usage](#HowCanIUseLixVoiceonMyWebsite (one of many applications))
+-   [Demo](#Demo-SeeHowItWorksForYourself)
 -   [Requirements](#requirements)
 -   [Support](#support)
 -   [License](#license)
@@ -70,7 +70,7 @@ input:
 
 1.  **Listening to the event and logging the message**:
 
-    `$w("#voiceCore1").onResponse((event) => {
+    ```$w("#voiceCore1").onResponse((event) => {
         console.log(event.data.message); // Logs the message from voice input
         // Use event.data.message to handle specific commands or actions
     });`
@@ -79,7 +79,7 @@ input:
 
     Alternatively, if you want to store the message in a variable for further processing, you can do:
 
-    `$w("#voiceCore1").onResponse((event) => {
+    ```$w("#voiceCore1").onResponse((event) => {
         const message = event.data.message; // Store the voice input message
         console.log(message); // Logs the message
         // Now you can use the 'message' variable to execute specific actions
@@ -93,7 +93,7 @@ input:
 
 ------------------------------------------------------------------------
 
-## Usage
+## How Can I Use Lix Voice on My Website (one of many applications)
 
 To enable voice recognition on your website:
 
@@ -119,8 +119,17 @@ To enable voice recognition on your website:
         any updates in real-time voice input and field population.
 
 ------------------------------------------------------------------------
+------------------------------------------------------------------------
 
-## Demo
+Important: Publish Before Testing
+---------------------------------
+
+The **Lix Voice** app only works on live, published Wix websites. Testing in the Wix Editor will not transcribe voice input. After setup, ensure your site is **published** to test and use the voice functionality effectively.
+
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+## Demo - See How It Works For Yourself
 
 Experience Lix Voice in action with our live demo. See how it enables hands-free navigation, voice-powered form filling, and seamless language switching.
 
